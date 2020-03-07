@@ -8,7 +8,7 @@ Misc commands that wrap existing docker containers.
 Any commands must be installed manually:
 
 ```bash
-shln install github.com/dockcmd/misc-sh v0.0.1
+shln install github.com/dockcmd/misc-sh v0.0.2
 
 # install manually
 shln ln gcloud
