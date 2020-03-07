@@ -2,6 +2,21 @@
 
 Misc commands that wrap existing docker containers.
 
+
+# Shln
+
+Any commands must be installed manually:
+
+```bash
+shln install github.com/dockcmd/misc-sh v0.0.1
+
+# install manually
+shln ln gcloud
+shln ln npm
+...
+
+```
+
 # References
 
 Shell documentation:

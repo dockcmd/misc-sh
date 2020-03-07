@@ -1,12 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 . shmod
 
 include github.com/dockcmd/shmod util.sh
 
+ep=${ep-npm}
+
 exec_or_dryrun \
   $(docker_run) \
   --volume ${HOME}:/root \
-  --entrypoint npm \
   $(docker_workdir) \
-  $(docker_image node) \
+  $(docker_image node 10.12.0-alpine) \
   "$@"
