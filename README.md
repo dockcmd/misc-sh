@@ -15,14 +15,14 @@ shln install dockcmd/misc-sh
 
 # install manually
 shln ln gcloud
-shln ln kustomize.sh
+shln ln kustomize
 shln ln npm
 shln ln ubuntu
 ```
 
 ## Configuration
 
-Docker image tags may be specified using ~/.docker_image.
+Docker image tags may be specified in the ~/.docker_image file.
 
 For example:
 

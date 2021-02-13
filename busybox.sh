@@ -1,5 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 . shmod
 import dockcmd/sh@v0.0.3 docker.sh
 
-run `sh= docker busybox` "$@"
+run `it=sh docker busybox "$@"`

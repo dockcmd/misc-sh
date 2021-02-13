@@ -2,4 +2,4 @@
 . shmod
 import dockcmd/sh@v0.0.3 docker.sh
 
-run `bash= docker ubuntu` "$@"
+run `it=bash hwd= docker ubuntu "$@"`

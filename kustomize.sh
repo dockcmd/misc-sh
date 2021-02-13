@@ -2,4 +2,4 @@
 . shmod
 import dockcmd/sh@v0.0.3 docker.sh
 
-run `docker kustomize` "$@"
+run `docker kustomize "$@"`
