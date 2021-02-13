@@ -3,8 +3,7 @@
 import dockcmd/sh@v0.0.3 docker.sh
 
 shmod_exec \
-  $(docker_run) \
-  --env-file <(env|grep ^AWS_) \
+  $(ep=${ep-node} docker_run) \
   $(docker_home_workdir) \
-  $(docker_image eksctl) \
+  $(docker_image node) \
   "$@"

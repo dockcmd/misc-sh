@@ -1,10 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+. shmod
+import dockcmd/sh@v0.0.3 docker.sh
 
-exec_or_dryrun \
-  `docker_run` \
-  --volume ${HOME}:/root \
-  --mount type=bind,source=$PWD,target=/wd,consistency=delegated \
-  --entrypoint java \
-  --workdir /wd \
-  `docker_image amazoncorretto` \
-  "$@"
+shmod_exec `ep=java docker_std amazoncorretto` "$@"

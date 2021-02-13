@@ -1,9 +1,5 @@
 #!/bin/sh
+. shmod
+import dockcmd/sh@v0.0.3 docker.sh
 
-
-exec_or_dryrun \
-  `docker_run` \
-  --mount type=bind,source=$HOME/.kube,target=/root/.kube,consistency=delegated \
-  `docker_workdir` \
-  `docker_image kustomize` \
-  "$@"
+shmod_exec `docker_std kustomize` "$@"

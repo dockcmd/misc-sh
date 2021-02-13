@@ -1,17 +1,10 @@
 #!/bin/bash
+. shmod
+import dockcmd/sh@v0.0.3 docker.sh
 
-. util.sh
-. docker_util.sh
-
-ep=${ep-docker-credential-gcloud}
-
-# gcloud call via docker
-exec_or_dryrun \
-  `ti= docker_run` \
+shmod_exec \
+  $(ti= ep=${ep-docker-credential-gcloud} docker_run) \
   --env-file <(env|grep ^CLOUDSDK_) \
-  --mount type=bind,source=$HOME/.kube,target=/root/.kube,consistency=delegated \
-  --mount type=bind,source=$HOME/.config,target=/root/.config,consistency=delegated \
-  --mount type=bind,source=$HOME/.docker,target=/root/.docker,consistency=delegated \
-  `docker_workdir` \
-  `docker_image gcr.io/cloud-builders/gcloud` \
+  $(docker_home_workdir) \
+  $(docker_image gcr.io/cloud-builders/gcloud) \
   "$@"

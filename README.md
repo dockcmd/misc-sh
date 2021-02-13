@@ -2,24 +2,31 @@
 
 Misc commands that wrap existing docker containers.
 
+## Prerequisites
 
-# Shln
+Install [shln](https://github.com/sageify/shln).
 
-Any commands must be installed manually:
+## Install
+
+Install this source and link scripts manually.
 
 ```bash
-shln install github.com/dockcmd/misc-sh v0.0.2
+shln install dockcmd/misc-sh
 
 # install manually
 shln ln gcloud
+shln ln kustomize.sh
 shln ln npm
-...
-
+shln ln ubuntu
 ```
 
-# References
+## Configuration
 
-Shell documentation:
+Docker image tags may be specified using ~/.docker_image.
 
-https://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html
-https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html
+For example:
+
+```bash
+# Docker image tags
+ubuntu:20.04
+```

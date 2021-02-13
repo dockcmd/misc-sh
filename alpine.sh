@@ -1,10 +1,5 @@
 #!/bin/bash
 . shmod
+import dockcmd/sh@v0.0.3 docker.sh
 
-include github.com/dockcmd/shmod util.sh
-
-exec_or_dryrun \
-  $(ti= docker_run) \
-  $(docker_workdir) \
-  $(docker_image alpine) \
-  "$@"
+shmod_exec `sh= docker_std alpine` "$@"
