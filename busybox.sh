@@ -2,4 +2,4 @@
 . shmod
 import dockcmd/sh@v0.0.3 docker.sh
 
-run `it=sh docker busybox "$@"`
+run `it=sh hwm= docker busybox "$@"`
