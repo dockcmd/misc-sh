@@ -2,4 +2,4 @@
 . shmod
 import dockcmd/sh@v0.0.3 docker.sh
 
-run `ep=${ep-node} hwd= docker node "$@"`
+run `ep=${ep-node} hwm= docker node "$@"`
