@@ -1,5 +1,10 @@
 #!/bin/sh
 . shmod
-import dockcmd/sh@v0.0.3 docker.sh
+import dockcmd/sh@v0.0.4 docker.sh
 
-run `ep=${ep-npm} hwm= docker node "$@"`
+ep=${ep-npm}
+p=${p-3000}
+ti=
+t9t=
+
+docker_run node "$@"

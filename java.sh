@@ -1,5 +1,7 @@
 #!/bin/sh
 . shmod
-import dockcmd/sh@v0.0.3 docker.sh
+import dockcmd/sh@v0.0.4 docker.sh
 
-run `ep=java docker amazoncorretto "$@"`
+ep=${ep-java}
+
+docker_run amazoncorretto "$@"`

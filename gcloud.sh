@@ -1,5 +1,9 @@
 #!/bin/sh
 . shmod
-import dockcmd/sh@v0.0.3 docker.sh
+import dockcmd/sh@v0.0.4 docker.sh
 
-run `e=^CLOUDSDK_ hwm= ep=gcloud docker gcr.io/google.com/cloudsdktool/cloud-sdk "$@"`
+e=${e-^CLOUDSDK_}
+ep=${ep-gcloud}
+t9t=
+
+docker_run gcr.io/google.com/cloudsdktool/cloud-sdk "$@"

@@ -1,5 +1,13 @@
 #!/bin/sh
 . shmod
-import dockcmd/sh@v0.0.3 docker.sh
+import dockcmd/sh@v0.0.4 docker.sh
 
-run `it=bash hwm= docker ubuntu "$@"`
+if [ $1 ]; then
+  ep=${ep-$1}
+  shift
+else
+  ti=${ti-bash}
+fi
+t9t=
+
+docker_run ubuntu "$@"
