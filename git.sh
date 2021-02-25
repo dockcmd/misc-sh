@@ -4,4 +4,4 @@ import dockcmd/sh@v0.0.4 docker.sh
 
 t9t=
 
-docker alpine/git "$@"` 
+docker_run alpine/git "$@"
