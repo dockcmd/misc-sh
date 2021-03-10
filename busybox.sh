@@ -6,7 +6,7 @@ if [ $1 ]; then
   ep=${ep-$1}
   shift
 else
-  ti=${ti-sh}
+  ti=${ti-ash}
 fi
 t9t=
 
