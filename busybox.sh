@@ -1,12 +1,14 @@
 #!/bin/sh
-. shmod
-import dockcmd/sh@v0.0.4 docker.sh
+# shellcheck disable=SC1091,SC2034
 
-if [ $1 ]; then
-  ep=${ep-$1}
+. shmod
+import github.com/dockcmd/sh@v0.0.4 docker.sh
+
+if [ "$1" ]; then
+  ep="${ep-$1}"
   shift
 else
-  ti=${ti-ash}
+  ti="${ti-sh}"
 fi
 t9t=
 
