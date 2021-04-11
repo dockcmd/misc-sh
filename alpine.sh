@@ -1,6 +1,7 @@
 #!/bin/sh
+# shellcheck disable=SC1091,SC2154
 . shmod
-import dockcmd/sh@v0.0.4 docker.sh
+import github.com/dockcmd/sh@v0.0.4 docker.sh
 
 if [ "$1" ]; then
   ep="${ep-$1}"
@@ -8,6 +9,6 @@ if [ "$1" ]; then
 else
   ti="${ti-ash}"
 fi
-t9t=
+t9t="$t9t"
 
 docker_run alpine "$@"
