@@ -1,8 +1,7 @@
 #!/bin/sh
 # shellcheck disable=SC1091,SC2154
-
 . shmod
-import github.com/dockcmd/sh@v0.0.4 docker.sh
+import github.com/dockcmd/sh@v0.0.5 docker.sh
 
 e="${e-AZURE_|ARM_}"
 [ "$ti" ] || ep="${ep-az}"
