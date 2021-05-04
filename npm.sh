@@ -1,10 +1,11 @@
 #!/bin/sh
+# shellcheck disable=SC1091,SC2269
 . shmod
-import dockcmd/sh@v0.0.4 docker.sh
+import github.com/dockcmd/sh@v0.0.5 docker.sh
 
-ep=${ep-npm}
+ep=${ep-${ti-npm}}
 p=${p-3000}
-ti=
-t9t=
+ti="$ti"
+t9t="$t9t"
 
 docker_run node "$@"
